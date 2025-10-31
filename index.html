@@ -1,147 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paolo S — Web Developer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="P.S. Studio — Web design and development by Paolo S. Building fast, data-driven, and beautifully designed web platforms." />
+  <title>P.S. Studio — Web Design & Development by Paolo S.</title>
   <style>
     :root {
-      --accent: #ffb200;
-      --bg: #fafafa;
-      --text: #222;
-      --muted: #666;
+      --bg: #f9fafb;
+      --text: #111827;
+      --accent: #2563eb;
+      --muted: #6b7280;
     }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--text);
-      margin: 0;
-      padding: 0;
       line-height: 1.6;
+      padding: 0 1rem;
     }
     header {
-      padding: 80px 20px 40px;
+      max-width: 900px;
+      margin: 4rem auto 2rem;
       text-align: center;
     }
-    h1 {
+    header h1 {
       font-size: 2.2rem;
-      margin-bottom: 10px;
+      letter-spacing: -0.5px;
     }
-    p.lead {
-      font-size: 1.1rem;
+    header p {
       color: var(--muted);
-      max-width: 600px;
-      margin: 0 auto;
+      font-size: 1.1rem;
     }
     section {
-      max-width: 850px;
-      margin: 60px auto;
-      padding: 0 20px;
+      max-width: 900px;
+      margin: 3rem auto;
     }
     h2 {
       font-size: 1.5rem;
-      margin-bottom: 15px;
-      border-left: 5px solid var(--accent);
-      padding-left: 10px;
+      margin-bottom: 1rem;
     }
-    .skills, .projects {
-      display: grid;
-      gap: 15px;
-    }
-    .skill-block {
+    .project, .service {
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-      padding: 20px;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .skill-block h3 {
-      margin: 0 0 10px;
-      font-size: 1.1rem;
-      color: var(--accent);
+    .project:hover, .service:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
-    a {
+    .project a {
       color: var(--accent);
       text-decoration: none;
+      font-weight: 500;
     }
-    a:hover {
-      text-decoration: underline;
+    .tech-list {
+      color: var(--muted);
+      font-size: 0.95rem;
     }
     footer {
       text-align: center;
-      padding: 40px;
-      font-size: 0.9rem;
+      margin: 4rem 0 2rem;
       color: var(--muted);
-      border-top: 1px solid #eee;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
     }
     @media (max-width: 600px) {
-      header { padding: 60px 20px 20px; }
-      h1 { font-size: 1.8rem; }
+      header h1 { font-size: 1.8rem; }
+      section { margin: 2rem auto; }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>👋 Hi, I'm Paolo S.</h1>
-    <p class="lead">
-      I build clean, fast, and data-driven web platforms — combining intuitive design, solid code, and seamless integrations.
-    </p>
+    <h1>👋 Hi, I'm <strong>Paolo S.</strong></h1>
+    <p>Founder & Developer at <strong>P.S. Studio</strong> — I build clean, fast, and data-driven web platforms combining intuitive design, solid code, and seamless integrations.</p>
   </header>
 
-  <section>
+  <section id="featured-project">
     <h2>💼 Featured Project</h2>
-    <div class="projects">
-      <div class="skill-block">
-        <h3><a href="https://marketsnap.com" target="_blank">MarketSnap.com</a></h3>
-        <p>
-          A full-scale fintech analytics platform built with WordPress + React. 
-          Includes custom dashboards, subscription flows, and API-driven data visualizations — optimized for performance and SEO.
-        </p>
-      </div>
+    <div class="project">
+      <h3><a href="#">MarketSnap.com</a></h3>
+      <p>A full-scale fintech analytics platform built with <strong>WordPress + React</strong>. Includes custom dashboards, subscription flows, and API-driven data visualizations — optimized for performance and SEO.</p>
+      <p class="tech-list">Tech: WordPress, React, PHP, MySQL, Chart.js, REST APIs</p>
     </div>
   </section>
 
-  <section>
+  <section id="services">
     <h2>🚀 Services</h2>
-    <div class="skills">
-      <div class="skill-block">
-        <h3>WordPress Development</h3>
-        <p>Custom themes, new pages, integrations, performance optimization, and secure deployments.</p>
-      </div>
-      <div class="skill-block">
-        <h3>Frontend Engineering</h3>
-        <p>Modern, responsive UIs using React, JavaScript (ES6+), HTML5, CSS3, and TailwindCSS.</p>
-      </div>
-      <div class="skill-block">
-        <h3>Backend & APIs</h3>
-        <p>PHP (WordPress), REST APIs, MySQL, Python automation, and secure user management.</p>
-      </div>
+    <div class="service">
+      <h3>WordPress Development</h3>
+      <p>Custom themes, new pages, integrations, performance optimization, and secure deployments.</p>
+    </div>
+    <div class="service">
+      <h3>Frontend Engineering</h3>
+      <p>Modern, responsive UIs using React, JavaScript (ES6+), HTML5, CSS3, and TailwindCSS.</p>
+    </div>
+    <div class="service">
+      <h3>Backend & APIs</h3>
+      <p>PHP (WordPress), REST APIs, MySQL, Python automation, and secure user management.</p>
     </div>
   </section>
 
-  <section>
+  <section id="tech">
     <h2>🧠 Tech Stack</h2>
-    <div class="skills">
-      <div class="skill-block">
-        <p><strong>Frontend:</strong> React, JavaScript, TailwindCSS, Chart.js, Responsive Design</p>
-        <p><strong>Backend:</strong> PHP, WordPress, Python, REST APIs, MySQL</p>
-        <p><strong>Tools:</strong> GitHub, CI/CD, Docker, Linux (Ubuntu), OpenLiteSpeed</p>
-        <p><strong>Integrations:</strong> Stripe, Firebase, AI APIs, JWT Auth</p>
-      </div>
-    </div>
+    <p><strong>Frontend:</strong> React · JavaScript · TailwindCSS · Chart.js · Responsive Design</p>
+    <p><strong>Backend:</strong> PHP · WordPress · Python · REST APIs · MySQL</p>
+    <p><strong>Tools:</strong> GitHub · CI/CD · Docker · Linux (Ubuntu) · OpenLiteSpeed</p>
+    <p><strong>Integrations:</strong> Stripe · Firebase · AI APIs · JWT Auth</p>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>📬 Contact</h2>
-    <p>
-      Let’s build something great together.<br>
-      <a href="mailto:your@email.com">your@email.com</a>  
-      ·  
-      <a href="https://github.com/paolo-s-dev" target="_blank">GitHub</a>
-    </p>
+    <p>Let’s build something great together.</p>
+    <p><a href="mailto:your@email.com">your@email.com</a> · <a href="https://github.com/paolo-s-dev" target="_blank">GitHub</a></p>
   </section>
 
   <footer>
-    © 2025 Paolo S — Web Developer
+    © 2025 <strong>P.S. Studio</strong> — Web Development by Paolo S.
   </footer>
+
 </body>
 </html>
